@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.start-screen, .difficulty-screen, .game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.start-screen button, .difficulty-screen button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.cell:hover {
+    background-color: #e0e0e0;
+}
+.message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ff0000;
+}

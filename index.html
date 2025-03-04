@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="startScreen" class="start-screen">
+        <h1>¡Bienvenido a Tic-Tac-Toe!</h1>
+        <button id="vsBot">Jugar contra el Bot</button>
+        <button id="vsPlayer">Jugar en línea</button>
+    </div>
+    <div id="difficultyScreen" class="difficulty-screen" style="display: none;">
+        <h2>Selecciona el nivel de dificultad:</h2>
+        <button id="easy">Fácil</button>
+        <button id="medium">Medio</button>
+        <button id="hard">Difícil</button>
+        <button id="expert">Experto</button>
+        <button id="impossible">Imposible</button>
+    </div>
+    <div id="gameScreen" class="game-screen" style="display: none;">
+        <div class="game-board" id="gameBoard">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div id="scoreboard" class="scoreboard">
+            <div>Victorias de X: <span id="scoreX">0</span></div>
+            <div>Victorias de O: <span id="scoreO">0</span></div>
+            <div>Empates: <span id="draws">0</span></div>
+        </div>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
